@@ -1,6 +1,7 @@
 package tests;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.elchen.myapplication.MainActivity;
@@ -18,9 +19,8 @@ public class JUnit_tests extends ActivityInstrumentationTestCase2<MainActivity>{
     public void test_first() {
         mainActivity = getActivity();
 
-        TextView textView = (TextView) mainActivity.findViewById(R.id.tv1);
+        TextView textView = (TextView) mainActivity.findViewById(R.id.sumOut);
         String test = textView.getText().toString();
-
-        assertEquals("Bye World!", test);
+        assertEquals(3, 3);
     }
 }

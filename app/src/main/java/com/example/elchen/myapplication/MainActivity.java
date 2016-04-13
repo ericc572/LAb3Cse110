@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,4 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void sum (View view) {
+        EditText num1 = (EditText) findViewById(R.id.num1);
+        EditText num2 = (EditText) findViewById(R.id.num2);
+        int sum = Integer.parseInt(num2.getText().toString()) + Integer.parseInt(num1.getText().toString());
+
+        TextView tv1 = (TextView) findViewById(R.id.sumOut);
+        tv1.setText("" + sum);
+    }
+
 }
